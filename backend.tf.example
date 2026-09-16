@@ -1,0 +1,14 @@
+# Remote state template. Rename to backend.tf once the state bucket and
+# lock table exist (see docs/runbook.md for the one-time setup commands).
+# Never commit a configured backend.tf: this stack's state file carries
+# account IDs and resource identifiers.
+#
+# terraform {
+#   backend "s3" {
+#     bucket         = "my-terraform-state-account-region"
+#     key            = "secure-vpc-baseline/terraform.tfstate"
+#     region         = "eu-west-3"
+#     dynamodb_table = "terraform-locks"
+#     encrypt        = true
+#   }
+# }

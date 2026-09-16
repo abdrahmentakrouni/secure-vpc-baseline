@@ -1,0 +1,16 @@
+# Copy to terraform.tfvars and adjust before the first apply.
+# Keep real values out of version control, this file is a template.
+
+aws_region                  = "eu-west-3"
+name_prefix                 = "core"
+vpc_cidr                    = "10.40.0.0/16"
+az_count                    = 2
+single_nat_gateway          = false
+enable_ssm_endpoints        = true
+log_retention_days          = 365
+object_lock_retention_days  = 30
+alarm_email                 = "security@example.com"
+
+tags = {
+  Owner = "platform-team"
+}
